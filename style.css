@@ -545,7 +545,7 @@ p {
 /* CTA button on hero */
 .hero-cta-wrap {
   position: absolute;
-  top: calc(50% + 160px);
+  top: calc(50% + 210px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -901,8 +901,8 @@ p {
 
 .case-studies-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
 /* Case Card */
@@ -1869,6 +1869,12 @@ p {
 
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
