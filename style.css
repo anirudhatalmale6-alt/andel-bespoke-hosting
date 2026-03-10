@@ -453,9 +453,12 @@ p {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   background: var(--navy-deep);
   overflow: hidden;
+  padding-top: var(--header-h);
+  padding-bottom: 160px;
 }
 
 .hero-bg {
@@ -489,10 +492,7 @@ p {
 
 /* Hero logo banner — centered */
 .hero-branding {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   z-index: 2;
   text-align: center;
   opacity: 0;
@@ -544,11 +544,10 @@ p {
 
 /* CTA button on hero */
 .hero-cta-wrap {
-  position: absolute;
-  top: calc(50% + 210px);
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   z-index: 2;
+  text-align: center;
+  margin-top: 32px;
   opacity: 0;
   animation: fadeUp 1s var(--ease-out-expo) 0.8s forwards;
 }
@@ -587,15 +586,17 @@ p {
 
 /* ── Overlay Cards at bottom of hero ── */
 .hero-cards {
-  position: relative;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   max-width: 1100px;
-  margin: 0 auto;
-  transform: translateY(50%);
-  padding: 0 40px;
+  width: calc(100% - 80px);
+  padding: 0;
 }
 
 .hero-card {
@@ -648,7 +649,7 @@ p {
    ═══════════════════════════════════════════════════ */
 
 .services {
-  padding: 160px 0 120px;
+  padding: 140px 0 120px;
   background: var(--ivory);
   position: relative;
   overflow: hidden;
@@ -1903,16 +1904,21 @@ p {
   .nav-links.open { right: 0; }
   .nav-links a { font-size: 0.9rem; }
 
-  .hero { min-height: 100svh; }
+  .hero { min-height: 100svh; padding-bottom: 80px; }
 
   .hero-branding img { width: 100px; height: 100px; }
   .hero-branding h1 { font-size: 2.4rem; }
 
   .hero-cards {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
     grid-template-columns: 1fr;
     gap: 0;
-    transform: translateY(30%);
+    width: 100%;
     padding: 0 24px;
+    margin-top: 40px;
   }
 
   .hero-card {
