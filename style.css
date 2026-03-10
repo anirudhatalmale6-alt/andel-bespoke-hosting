@@ -727,7 +727,7 @@ p {
 
 .team-section {
   padding: 120px 0;
-  background: var(--ivory-warm);
+  background: var(--white);
 }
 
 .team-header {
@@ -757,8 +757,8 @@ p {
   margin: 0 auto 24px;
   border-radius: 6px;
   overflow: hidden;
-  border: 3px solid rgba(201, 169, 110, 0.15);
-  box-shadow: 0 12px 40px rgba(26, 39, 68, 0.1);
+  border: 1px solid rgba(26, 39, 68, 0.08);
+  box-shadow: 0 8px 32px rgba(26, 39, 68, 0.08);
 }
 
 .team-photo img {
@@ -1050,7 +1050,7 @@ p {
 /* Philosophy */
 .philosophy {
   padding: 120px 0;
-  background: var(--ivory-warm);
+  background: #f7f8fa;
 }
 
 .philosophy-header {
