@@ -739,29 +739,35 @@ p {
   margin-bottom: 16px;
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.team-cards {
+  display: flex;
+  flex-direction: column;
   gap: 48px;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
-.team-member {
-  text-align: center;
+.team-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
 }
 
-.team-photo {
-  width: 240px;
-  height: 300px;
-  margin: 0 auto 24px;
+.team-card.reverse {
+  direction: rtl;
+}
+
+.team-card.reverse > * {
+  direction: ltr;
+}
+
+.team-card-photo {
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid rgba(26, 39, 68, 0.08);
-  box-shadow: 0 8px 32px rgba(26, 39, 68, 0.08);
+  box-shadow: 0 12px 40px rgba(26, 39, 68, 0.1);
+  aspect-ratio: 3 / 4;
 }
 
-.team-photo img {
+.team-card-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -769,20 +775,30 @@ p {
   transition: transform 0.6s var(--ease-out-expo);
 }
 
-.team-member:hover .team-photo img {
+.team-card:hover .team-card-photo img {
   transform: scale(1.03);
 }
 
-.team-member h3 {
-  font-size: 1.3rem;
-  margin-bottom: 4px;
+.team-card-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
 }
 
 .team-role {
   font-size: 0.85rem;
+  font-weight: 500;
   color: var(--gold-dark);
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   max-width: none;
+  margin-bottom: 20px;
+}
+
+.team-bio {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 440px;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -1433,15 +1449,23 @@ p {
     gap: 48px;
   }
 
-  .team-grid {
+  .team-card {
     grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 300px;
+    gap: 32px;
+    text-align: center;
   }
 
-  .team-photo {
-    width: 200px;
-    height: 260px;
+  .team-card.reverse {
+    direction: ltr;
+  }
+
+  .team-card-photo {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .team-bio {
+    margin: 0 auto;
   }
 
   .philosophy-grid {
