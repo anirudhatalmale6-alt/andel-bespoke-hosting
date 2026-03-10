@@ -47,49 +47,64 @@
     </div>
   </header>
 
-  <!-- ═══ HERO ═══ -->
+  <!-- ═══ HERO — Full-Screen Photo ═══ -->
   <section class="hero">
-    <div class="hero-content">
-      <img src="assets/logo.jpeg" alt="Andel & Co. Logo" class="hero-logo">
+    <div class="hero-bg">
+      <img src="assets/hero-home.jpg" alt="Luxury property interior">
+    </div>
+
+    <div class="hero-branding">
+      <img src="assets/logo.jpeg" alt="Andel & Co. Logo">
       <p class="hero-tagline">Bespoke Hosting</p>
       <h1>Andel <span class="ampersand">&amp;</span> Co.</h1>
-      <p class="hero-description">
-        We bring the art of refined hospitality to short-term rentals — managing every detail so your property earns more while your guests remember everything.
-      </p>
+    </div>
+
+    <div class="hero-cta-wrap">
       <a href="contact.html" class="hero-cta">
-        Begin the Conversation
+        Get in Touch
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ═══ INTRO ═══ -->
-  <section class="intro">
-    <div class="container">
-      <div class="intro-grid">
-        <div class="intro-text reveal">
-          <div class="section-label">Our Approach</div>
-          <h2>Hosting elevated to an <em>art form</em></h2>
-          <p>
-            At Andel &amp; Co., we believe that every stay should feel intentional. We partner with property owners who share our passion for excellence, handling the complexities of short-term rental management with white-glove precision.
-          </p>
-          <p>
-            From the moment a guest discovers your listing to the day they leave a glowing review, every touchpoint is curated, every detail considered, every expectation exceeded.
-          </p>
-        </div>
-        <div class="intro-visual reveal reveal-delay-2">
-          <div class="intro-image-frame">
-            <div class="intro-image-pattern"></div>
-            <div class="intro-image-content">
-              <div class="monogram">A</div>
-            </div>
-          </div>
-          <div class="intro-accent"></div>
-        </div>
+    <!-- Overlay Cards -->
+    <div class="hero-cards">
+      <div class="hero-card">
+        <svg class="hero-card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 36V18a2 2 0 0 1 .876-1.657l16-11a2 2 0 0 1 2.248 0l16 11A2 2 0 0 1 42 18v18"/>
+          <path d="M6 36h36"/>
+          <path d="M18 36V24h12v12"/>
+        </svg>
+        <h3>About Us</h3>
+        <p>We bring refined hospitality to short-term rentals — managing every detail with white-glove care.</p>
+      </div>
+
+      <div class="hero-card">
+        <svg class="hero-card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="10" width="36" height="28" rx="2"/>
+          <path d="M6 18h36"/>
+          <circle cx="15" cy="28" r="3"/>
+          <path d="M22 25h14"/>
+          <path d="M22 31h10"/>
+        </svg>
+        <h3>Our Services</h3>
+        <p>Guest communication, listing optimisation, dynamic pricing, and full property care — all handled.</p>
+      </div>
+
+      <div class="hero-card">
+        <svg class="hero-card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 38V14"/>
+          <path d="M6 38h36"/>
+          <path d="M12 38V24"/>
+          <path d="M20 38V18"/>
+          <path d="M28 38V22"/>
+          <path d="M36 38V12"/>
+          <circle cx="12" cy="24" r="2"/>
+          <circle cx="20" cy="18" r="2"/>
+          <circle cx="28" cy="22" r="2"/>
+          <circle cx="36" cy="12" r="2"/>
+        </svg>
+        <h3>Proven Results</h3>
+        <p>98% guest satisfaction, 4.9 average rating, and 35% average revenue increase for our partners.</p>
       </div>
     </div>
   </section>
@@ -143,7 +158,7 @@
             <circle cx="36" cy="12" r="2"/>
           </svg>
           <h3>Pricing Strategy</h3>
-          <p>Dynamic, data-informed pricing that maximises revenue through every season, event and market shift — no guesswork involved.</p>
+          <p>Dynamic, data-informed pricing that maximises revenue through every season, event and market shift.</p>
         </div>
 
         <div class="service-card reveal reveal-delay-4">
