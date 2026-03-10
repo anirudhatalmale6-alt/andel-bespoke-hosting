@@ -856,17 +856,17 @@ p {
 }
 
 /* ═══════════════════════════════════════════════════
-   TESTIMONIALS
+   CASE STUDIES
    ═══════════════════════════════════════════════════ */
 
-.testimonials {
+.case-studies {
   padding: 120px 0;
   background: #f5f7fa;
   position: relative;
   overflow: hidden;
 }
 
-.testimonials::before {
+.case-studies::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -877,7 +877,7 @@ p {
   pointer-events: none;
 }
 
-.testimonials::after {
+.case-studies::after {
   content: '';
   position: absolute;
   top: -150px;
@@ -889,79 +889,178 @@ p {
   pointer-events: none;
 }
 
-.testimonials-header {
+.case-studies-header {
   text-align: center;
   margin-bottom: 72px;
 }
 
-.testimonials-grid {
+.case-studies-header .section-label::before { display: none; }
+
+.case-studies-header h2 { margin-bottom: 16px; }
+.case-studies-header p { margin: 0 auto; }
+
+.case-studies-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
 }
 
-.testimonial-card {
-  padding: 44px 32px 36px;
+/* Case Card */
+.case-card {
   background: var(--white);
   border: 1px solid rgba(26, 39, 68, 0.06);
-  border-radius: 4px;
-  transition: box-shadow 0.4s ease;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
 
-.testimonial-card:hover {
-  box-shadow: 0 16px 48px rgba(26, 39, 68, 0.06);
+.case-card:hover {
+  box-shadow: 0 20px 60px rgba(26, 39, 68, 0.08);
+  transform: translateY(-4px);
 }
 
-.testimonial-quote-mark {
-  font-family: var(--font-display);
-  font-size: 4rem;
+.case-card-header {
+  padding: 32px 32px 20px;
+  border-bottom: 1px solid rgba(26, 39, 68, 0.06);
+}
+
+.case-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  background: rgba(201, 169, 110, 0.1);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.case-card-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.case-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: none;
+}
+
+.case-location svg {
   color: var(--gold);
-  opacity: 0.3;
-  line-height: 1;
-  margin-bottom: 8px;
+  flex-shrink: 0;
 }
 
-.testimonial-card blockquote {
+/* Situation */
+.case-situation {
+  padding: 20px 32px;
+  background: rgba(26, 39, 68, 0.02);
+}
+
+.case-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.case-situation p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: none;
+  margin: 0;
+}
+
+/* Metrics */
+.case-metrics {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.case-metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(26, 39, 68, 0.05);
+}
+
+.case-metric:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.case-metric-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.case-metric-values {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.case-metric-values svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.case-before {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  font-style: italic;
-  color: var(--navy);
-  line-height: 1.7;
-  margin-bottom: 28px;
+  font-weight: 400;
+  color: #b0b5bf;
+  text-decoration: line-through;
+  text-decoration-color: rgba(176, 181, 191, 0.4);
 }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-top: 1px solid rgba(26, 39, 68, 0.06);
-  padding-top: 20px;
-}
-
-.testimonial-author-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.case-after {
   font-family: var(--font-display);
-  font-size: 1rem;
-  color: var(--gold);
-}
-
-.testimonial-author-info strong {
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: var(--navy);
 }
 
-.testimonial-author-info span {
+/* Result */
+.case-result {
+  padding: 20px 32px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.case-uplift {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.case-detail {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: rgba(250, 248, 242, 0.45);
+  text-align: right;
+  line-height: 1.5;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -1841,9 +1940,18 @@ p {
 
   .stat-item::after { display: none !important; }
 
-  .testimonials-grid {
+  .case-studies-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .case-result {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .case-detail {
+    text-align: center;
   }
 
   .story-grid,
