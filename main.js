@@ -185,26 +185,33 @@
     });
   });
 
-  // ── Text Split Animation for Hero Title ──
+  // ── Word-by-Word Animation for Hero Title ──
   var heroTitle = document.querySelector('.hero-branding h1');
   if (heroTitle) {
-    var html = heroTitle.innerHTML;
-    // Wrap each character in a span (skip HTML tags)
-    var chars = [];
-    var inTag = false;
-    var charIndex = 0;
-    for (var i = 0; i < html.length; i++) {
-      if (html[i] === '<') { inTag = true; chars.push(html[i]); continue; }
-      if (html[i] === '>') { inTag = false; chars.push(html[i]); continue; }
-      if (inTag) { chars.push(html[i]); continue; }
-      if (html[i] === ' ') {
-        chars.push(' ');
-      } else {
-        chars.push('<span class="char-anim" style="animation-delay:' + (0.6 + charIndex * 0.04) + 's">' + html[i] + '</span>');
-        charIndex++;
+    // Get child nodes and wrap text nodes word-by-word
+    var children = Array.from(heroTitle.childNodes);
+    var newHTML = '';
+    var wordIndex = 0;
+    children.forEach(function(node) {
+      if (node.nodeType === 3) { // text node
+        var words = node.textContent.split(/(\s+)/);
+        words.forEach(function(word) {
+          if (word.trim()) {
+            newHTML += '<span class="word-anim" style="animation-delay:' + (0.5 + wordIndex * 0.12) + 's">' + word + '</span>';
+            wordIndex++;
+          } else {
+            newHTML += word;
+          }
+        });
+      } else if (node.nodeType === 1) { // element node
+        var el = node.cloneNode(true);
+        el.classList.add('word-anim');
+        el.style.animationDelay = (0.5 + wordIndex * 0.12) + 's';
+        newHTML += el.outerHTML;
+        wordIndex++;
       }
-    }
-    heroTitle.innerHTML = chars.join('');
+    });
+    heroTitle.innerHTML = newHTML;
   }
 
   // ── Floating Particles in Hero ──
