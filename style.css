@@ -489,6 +489,20 @@ p {
 .services {
   padding: 160px 0 120px;
   background: var(--ivory);
+  position: relative;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(201, 169, 110, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 85% 80%, rgba(26, 39, 68, 0.03) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .services-header {
@@ -601,6 +615,18 @@ p {
 .stats {
   padding: 80px 0;
   background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.stats::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 80% at 20% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 80% 50%, rgba(250, 248, 242, 0.03) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .stats-grid {
@@ -648,6 +674,18 @@ p {
 
 .testimonials {
   padding: 120px 0;
+  background: var(--white);
+  position: relative;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(26, 39, 68, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(201, 169, 110, 0.03) 0%, transparent 40%);
+  pointer-events: none;
 }
 
 .testimonials-header {
@@ -741,7 +779,10 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(250, 248, 242, 0.02) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse 70% 50% at 30% 0%, rgba(201, 169, 110, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 70% 100%, rgba(201, 169, 110, 0.05) 0%, transparent 60%),
+    repeating-linear-gradient(120deg, transparent, transparent 100px, rgba(250, 248, 242, 0.008) 100px, rgba(250, 248, 242, 0.008) 101px);
 }
 
 .cta-banner h2 {
@@ -762,7 +803,17 @@ p {
 
 .team-section {
   padding: 120px 0;
-  background: var(--white);
+  background: linear-gradient(175deg, #f8f9fb 0%, var(--white) 40%, #f8f9fb 100%);
+  position: relative;
+}
+
+.team-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(26, 39, 68, 0.025) 0%, transparent 45%);
+  pointer-events: none;
 }
 
 .team-header {
@@ -841,7 +892,7 @@ p {
    ═══════════════════════════════════════════════════ */
 
 .site-footer {
-  background: var(--navy-deep);
+  background: linear-gradient(180deg, var(--navy-deep) 0%, #0a1220 100%);
   border-top: 1px solid rgba(250, 248, 242, 0.05);
   padding: 64px 0 40px;
 }
@@ -1098,7 +1149,16 @@ p {
 /* Philosophy */
 .philosophy {
   padding: 120px 0;
-  background: #f7f8fa;
+  background: linear-gradient(180deg, #f7f8fa 0%, #eef0f4 100%);
+  position: relative;
+}
+
+.philosophy::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(26, 39, 68, 0.03) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .philosophy-header {
@@ -1139,6 +1199,18 @@ p {
 .achievements {
   padding: 120px 0;
   background: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 70% at 10% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 90% 30%, rgba(250, 248, 242, 0.03) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .achievements-header {
@@ -1196,6 +1268,18 @@ p {
 
 .contact-section {
   padding: 120px 0 140px;
+  background: var(--ivory);
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(26, 39, 68, 0.025) 0%, transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(201, 169, 110, 0.03) 0%, transparent 45%);
+  pointer-events: none;
 }
 
 .contact-grid {
