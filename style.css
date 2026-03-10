@@ -527,6 +527,17 @@ p {
   color: var(--gold);
 }
 
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 300;
+  color: rgba(250, 248, 242, 0.7);
+  max-width: 520px;
+  margin: 16px auto 0;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
 @keyframes fadeUp {
   to { opacity: 1; }
 }
