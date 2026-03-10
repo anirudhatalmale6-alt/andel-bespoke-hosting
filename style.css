@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════
-   ANDEL & CO. — BESPOKE HOSTING
-   Full-Screen Hero Photo Style
+   ANDEL & CO. — BESPOKE CO-HOSTING CONSULTANTS
+   Personal Consulting Portfolio Style
    ═══════════════════════════════════════════════════ */
 
 /* ── Fonts ── */
@@ -441,14 +441,14 @@ p {
   background: var(--white);
   padding: 40px 32px 36px;
   text-align: center;
-  border: 1px solid rgba(201, 169, 110, 0.1);
+  border: 1px solid rgba(26, 39, 68, 0.06);
   transition: box-shadow 0.4s ease, transform 0.3s ease;
   opacity: 0;
   animation: cardIn 0.8s var(--ease-out-expo) forwards;
 }
 
 .hero-card:nth-child(1) { animation-delay: 0.6s; }
-.hero-card:nth-child(2) { animation-delay: 0.75s; border-left: none; border-right: none; }
+.hero-card:nth-child(2) { animation-delay: 0.75s; border-left: none; border-right: none; border-color: rgba(26, 39, 68, 0.06); }
 .hero-card:nth-child(3) { animation-delay: 0.9s; }
 
 @keyframes cardIn {
@@ -520,7 +520,7 @@ p {
   position: relative;
   padding: 44px 28px 36px;
   background: var(--white);
-  border: 1px solid rgba(201, 169, 110, 0.1);
+  border: 1px solid rgba(26, 39, 68, 0.06);
   border-radius: 4px;
   transition: all 0.5s var(--ease-out-expo);
 }
@@ -586,7 +586,7 @@ p {
   right: 0;
   height: 80%;
   width: 1px;
-  background: rgba(201, 169, 110, 0.12);
+  background: rgba(250, 248, 242, 0.08);
 }
 
 .stat-number {
@@ -629,7 +629,7 @@ p {
 .testimonial-card {
   padding: 44px 32px 36px;
   background: var(--white);
-  border: 1px solid rgba(201, 169, 110, 0.12);
+  border: 1px solid rgba(26, 39, 68, 0.06);
   border-radius: 4px;
   transition: box-shadow 0.4s ease;
 }
@@ -660,7 +660,7 @@ p {
   display: flex;
   align-items: center;
   gap: 12px;
-  border-top: 1px solid rgba(201, 169, 110, 0.1);
+  border-top: 1px solid rgba(26, 39, 68, 0.06);
   padding-top: 20px;
 }
 
@@ -706,7 +706,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201, 169, 110, 0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(250, 248, 242, 0.02) 0%, transparent 70%);
 }
 
 .cta-banner h2 {
@@ -791,7 +791,7 @@ p {
 
 .site-footer {
   background: var(--navy-deep);
-  border-top: 1px solid rgba(201, 169, 110, 0.08);
+  border-top: 1px solid rgba(250, 248, 242, 0.05);
   padding: 64px 0 40px;
 }
 
@@ -870,7 +870,7 @@ p {
   text-align: center;
   padding-top: 40px;
   margin-top: 40px;
-  border-top: 1px solid rgba(201, 169, 110, 0.06);
+  border-top: 1px solid rgba(250, 248, 242, 0.05);
 }
 
 .footer-bottom p {
@@ -965,7 +965,7 @@ p {
 .story-signature {
   margin-top: 32px;
   padding-top: 24px;
-  border-top: 1px solid rgba(201, 169, 110, 0.15);
+  border-top: 1px solid rgba(26, 39, 68, 0.1);
 }
 
 .story-signature .name {
@@ -1004,15 +1004,12 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(201, 169, 110, 0.08) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(26, 39, 68, 0.05) 0%, transparent 50%);
   z-index: 1;
 }
 
 .intro-image-pattern {
-  position: absolute;
-  inset: 0;
-  opacity: 0.04;
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(201, 169, 110, 0.5) 30px, rgba(201, 169, 110, 0.5) 31px);
+  display: none;
 }
 
 .intro-image-content {
@@ -1042,9 +1039,9 @@ p {
   right: -20px;
   width: 120px;
   height: 120px;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--navy);
   border-radius: 2px;
-  opacity: 0.15;
+  opacity: 0.08;
 }
 
 /* Philosophy */
@@ -1116,7 +1113,7 @@ p {
 .achievement-card {
   text-align: center;
   padding: 48px 24px;
-  border: 1px solid rgba(201, 169, 110, 0.1);
+  border: 1px solid rgba(250, 248, 242, 0.08);
   border-radius: 4px;
 }
 
@@ -1182,14 +1179,14 @@ p {
   align-items: flex-start;
   gap: 20px;
   padding: 24px;
-  border: 1px solid rgba(201, 169, 110, 0.12);
+  border: 1px solid rgba(26, 39, 68, 0.08);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 .contact-method:hover {
-  border-color: rgba(201, 169, 110, 0.3);
-  background: rgba(201, 169, 110, 0.03);
+  border-color: rgba(26, 39, 68, 0.15);
+  background: rgba(26, 39, 68, 0.02);
 }
 
 .contact-method-icon {
@@ -1231,7 +1228,7 @@ p {
 .contact-form-wrapper {
   background: var(--white);
   padding: 56px 48px;
-  border: 1px solid rgba(201, 169, 110, 0.12);
+  border: 1px solid rgba(26, 39, 68, 0.06);
   border-radius: 4px;
 }
 
@@ -1267,7 +1264,7 @@ p {
   font-size: 0.9rem;
   color: var(--charcoal);
   background: var(--ivory);
-  border: 1px solid rgba(201, 169, 110, 0.15);
+  border: 1px solid rgba(26, 39, 68, 0.1);
   border-radius: 2px;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -1401,12 +1398,12 @@ p {
   }
 
   .hero-card {
-    border: 1px solid rgba(201, 169, 110, 0.1);
+    border: 1px solid rgba(26, 39, 68, 0.06);
   }
 
   .hero-card:nth-child(2) {
-    border-left: 1px solid rgba(201, 169, 110, 0.1);
-    border-right: 1px solid rgba(201, 169, 110, 0.1);
+    border-left: 1px solid rgba(26, 39, 68, 0.06);
+    border-right: 1px solid rgba(26, 39, 68, 0.06);
     border-top: none;
     border-bottom: none;
   }
