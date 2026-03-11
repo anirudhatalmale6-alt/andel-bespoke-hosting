@@ -1179,7 +1179,7 @@ p {
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(26, 39, 68, 0.1);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 2 / 3;
 }
 
 .team-card-photo img {
@@ -1736,6 +1736,11 @@ p {
   font-size: 0.9rem;
   color: var(--gold-dark);
   line-height: 1.6;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: var(--navy);
 }
 
 .contact-method-text a span {
