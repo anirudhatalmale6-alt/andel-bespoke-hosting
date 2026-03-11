@@ -287,13 +287,25 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      var firstName = form.querySelector('#firstName');
-      var email = form.querySelector('#email');
-      var message = form.querySelector('#message');
+      var firstName = (form.querySelector('#firstName').value || '').trim();
+      var lastName = (form.querySelector('#lastName').value || '').trim();
+      var email = (form.querySelector('#email').value || '').trim();
+      var phone = (form.querySelector('#phone').value || '').trim();
+      var message = (form.querySelector('#message').value || '').trim();
 
-      if (!firstName.value.trim() || !email.value.trim() || !message.value.trim()) {
+      if (!firstName || !email || !message) {
         return;
       }
+
+      var subject = 'New enquiry from ' + firstName + ' ' + lastName;
+      var body = 'Name: ' + firstName + ' ' + lastName + '\n'
+        + 'Email: ' + email + '\n'
+        + 'Phone: ' + phone + '\n\n'
+        + 'Message:\n' + message;
+
+      window.location.href = 'mailto:info@andelbespoke.cz'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
 
       form.style.display = 'none';
       success.classList.add('show');
