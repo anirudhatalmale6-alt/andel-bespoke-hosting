@@ -1718,21 +1718,33 @@ p {
   height: 20px;
 }
 
+.contact-method-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-method-text strong {
   display: block;
   font-family: var(--font-display);
   font-size: 1.1rem;
   color: var(--navy);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.contact-method-text a,
-.contact-method-text span {
+.contact-method-text a {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gold-dark);
+  line-height: 1.6;
+}
+
+.contact-method-text a span {
   font-size: 0.9rem;
   color: var(--gold-dark);
 }
 
-.contact-method-text a:hover {
+.contact-method-text a:hover,
+.contact-method-text a:hover span {
   color: var(--gold);
 }
 
